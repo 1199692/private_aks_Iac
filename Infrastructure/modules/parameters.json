@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+        "rgName": {
+            "value": "HB-rg"
+        },
+		"aksClusterName":{
+			"value": "aks-hb"
+		},
+		"k8sVersion": {
+			"value": "1.29.7"
+		},
+		"aksNodes" : {
+			"value": 1
+		},
+		"aksSkuTier": {
+			"value": "Free"
+		},
+		"adminPublicKey":{
+			"value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDPvDIFeQTfALOWvvs9pJTE84OJwoB64zwZFm0TF8KMciaCryv8Cpd+H7mwb7lNxYxjcjONCpnU47/FvTCQMMHyLaHtkeAzRBWMut5aUdI7PtsZrfmJYQajlgTSzruMeyqdh0ApcHqd41hqSEnR3Yc2yC5yxg2mZdlgfjj/BY++/pkxYzUyBicOGBmWtTWqQzR6WWyeiO3XVKyDXp7yHBnZEN2r624ApCbV+leyuvrH2lTBd/N2c3oSnxjsj94UIt1uTNXqM7c6GyTbm/vDbZpvJMvBQIO7G2QtUC7ecWSGOWDEPYCfAv6+K46oGqfz3mMmI5KZGEaodLgCgSwK+jTQ+M2ObJ+uthh0P5gxSUOoqvV9w+4sMVo9uvTekGq2V3W5WZsL6Un/UzQp/TAoEqUYNhuzCVE97t+7lqWHKgXR3tVnLgQFw79VYOYx+Wg6ZA0hj3x7YvvWteT/yiUCsR9Ae6/mfbAhu0ulvt+nrnEbF6+nr86pLciyK/E5T7E7dE= generated-by-azure"
+		}
+
+	}
+  }
