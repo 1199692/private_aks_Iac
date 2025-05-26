@@ -18,6 +18,8 @@ This folder contains Bicep modules to provision and configure all necessary Azur
 - `bastion.bicep` – Bastion host setup
 - `jump-box.bicep` – Jumpbox server (for private access)
 - `main.bicep` – Main orchestrating Bicep file that ties all modules together
+- `parameters.json` – Parameters file to pass the parameters
+
 
 #### 📂 `aksComponents/`
 This subfolder includes Kubernetes component definitions as Bicep resources:
@@ -63,7 +65,26 @@ Includes Kubernetes YAML manifests (Deployments, Services, etc.)
 - Docker (for local builds if needed)
 
 ---
+## 🚀 Deployment
 
+To deploy the infrastructure using the main Bicep file and a parameters file, run the following command:
+
+### 📍 At the **subscription level**:
+
+```bash
+az deployment sub create \
+  --location <location> \
+  --template-file ./infrastructure/main.bicep \
+  --parameters @./infrastructure/parameters.json
+```
+### 📍 At the resource group level:
+
+```bash
+az deployment group create \
+  --resource-group <your-resource-group> \
+  --template-file ./infrastructure/main.bicep \
+  --parameters @./infrastructure/parameters.json
+```
 ## 🚧 Work in Progress
 
 This setup can be extended with:
